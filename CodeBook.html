@@ -289,19 +289,50 @@ subject/volunteer. Save this dataset to a file called <strong>WearableData.RData
 <p>The <strong>WearableData.RData</strong>.RData** contains the tidy dataset obtained after step 16 above and can be loaded into an R session using the load command as shown below. The variables of this dataset are also shown using the <strong>names()</strong> function in R. </p>
 
 <pre><code class="r">load(&quot;WearableData.RData&quot;)
+names(WearableData)
 </code></pre>
 
-<pre><code>## Warning: cannot open compressed file &#39;WearableData.RData&#39;, probable reason
-## &#39;No such file or directory&#39;
-</code></pre>
-
-<pre><code>## Error: cannot open the connection
-</code></pre>
-
-<pre><code class="r">names(WearableData)
-</code></pre>
-
-<pre><code>## Error: object &#39;WearableData&#39; not found
+<pre><code>##  [1] &quot;subjectid&quot;                     &quot;description&quot;                  
+##  [3] &quot;tBodyAcc.mean.X&quot;               &quot;tBodyAcc.mean.Y&quot;              
+##  [5] &quot;tBodyAcc.mean.Z&quot;               &quot;tBodyAcc.std.X&quot;               
+##  [7] &quot;tBodyAcc.std.Y&quot;                &quot;tBodyAcc.std.Z&quot;               
+##  [9] &quot;tGravityAcc.mean.X&quot;            &quot;tGravityAcc.mean.Y&quot;           
+## [11] &quot;tGravityAcc.mean.Z&quot;            &quot;tGravityAcc.std.X&quot;            
+## [13] &quot;tGravityAcc.std.Y&quot;             &quot;tGravityAcc.std.Z&quot;            
+## [15] &quot;tBodyAccJerk.mean.X&quot;           &quot;tBodyAccJerk.mean.Y&quot;          
+## [17] &quot;tBodyAccJerk.mean.Z&quot;           &quot;tBodyAccJerk.std.X&quot;           
+## [19] &quot;tBodyAccJerk.std.Y&quot;            &quot;tBodyAccJerk.std.Z&quot;           
+## [21] &quot;tBodyGyro.mean.X&quot;              &quot;tBodyGyro.mean.Y&quot;             
+## [23] &quot;tBodyGyro.mean.Z&quot;              &quot;tBodyGyro.std.X&quot;              
+## [25] &quot;tBodyGyro.std.Y&quot;               &quot;tBodyGyro.std.Z&quot;              
+## [27] &quot;tBodyGyroJerk.mean.X&quot;          &quot;tBodyGyroJerk.mean.Y&quot;         
+## [29] &quot;tBodyGyroJerk.mean.Z&quot;          &quot;tBodyGyroJerk.std.X&quot;          
+## [31] &quot;tBodyGyroJerk.std.Y&quot;           &quot;tBodyGyroJerk.std.Z&quot;          
+## [33] &quot;tBodyAccMag.mean&quot;              &quot;tBodyAccMag.std&quot;              
+## [35] &quot;tGravityAccMag.mean&quot;           &quot;tGravityAccMag.std&quot;           
+## [37] &quot;tBodyAccJerkMag.mean&quot;          &quot;tBodyAccJerkMag.std&quot;          
+## [39] &quot;tBodyGyroMag.mean&quot;             &quot;tBodyGyroMag.std&quot;             
+## [41] &quot;tBodyGyroJerkMag.mean&quot;         &quot;tBodyGyroJerkMag.std&quot;         
+## [43] &quot;fBodyAcc.mean.X&quot;               &quot;fBodyAcc.mean.Y&quot;              
+## [45] &quot;fBodyAcc.mean.Z&quot;               &quot;fBodyAcc.std.X&quot;               
+## [47] &quot;fBodyAcc.std.Y&quot;                &quot;fBodyAcc.std.Z&quot;               
+## [49] &quot;fBodyAcc.meanFreq.X&quot;           &quot;fBodyAcc.meanFreq.Y&quot;          
+## [51] &quot;fBodyAcc.meanFreq.Z&quot;           &quot;fBodyAccJerk.mean.X&quot;          
+## [53] &quot;fBodyAccJerk.mean.Y&quot;           &quot;fBodyAccJerk.mean.Z&quot;          
+## [55] &quot;fBodyAccJerk.std.X&quot;            &quot;fBodyAccJerk.std.Y&quot;           
+## [57] &quot;fBodyAccJerk.std.Z&quot;            &quot;fBodyAccJerk.meanFreq.X&quot;      
+## [59] &quot;fBodyAccJerk.meanFreq.Y&quot;       &quot;fBodyAccJerk.meanFreq.Z&quot;      
+## [61] &quot;fBodyGyro.mean.X&quot;              &quot;fBodyGyro.mean.Y&quot;             
+## [63] &quot;fBodyGyro.mean.Z&quot;              &quot;fBodyGyro.std.X&quot;              
+## [65] &quot;fBodyGyro.std.Y&quot;               &quot;fBodyGyro.std.Z&quot;              
+## [67] &quot;fBodyGyro.meanFreq.X&quot;          &quot;fBodyGyro.meanFreq.Y&quot;         
+## [69] &quot;fBodyGyro.meanFreq.Z&quot;          &quot;fBodyAccMag.mean&quot;             
+## [71] &quot;fBodyAccMag.std&quot;               &quot;fBodyAccMag.meanFreq&quot;         
+## [73] &quot;fBodyBodyAccJerkMag.mean&quot;      &quot;fBodyBodyAccJerkMag.std&quot;      
+## [75] &quot;fBodyBodyAccJerkMag.meanFreq&quot;  &quot;fBodyBodyGyroMag.mean&quot;        
+## [77] &quot;fBodyBodyGyroMag.std&quot;          &quot;fBodyBodyGyroMag.meanFreq&quot;    
+## [79] &quot;fBodyBodyGyroJerkMag.mean&quot;     &quot;fBodyBodyGyroJerkMag.std&quot;     
+## [81] &quot;fBodyBodyGyroJerkMag.meanFreq&quot;
 </code></pre>
 
 <h3>Details of each variable:</h3>
@@ -318,19 +349,50 @@ subject/volunteer. Save this dataset to a file called <strong>WearableData.RData
 <p>The <strong>WearableDataAvg.RData</strong> contains the tidy dataset obtained after step 16 above and can be loaded into an R session using the load command as shown below. The variables of this dataset are also shown using the <strong>names()</strong> function in R. </p>
 
 <pre><code class="r">load(&quot;WearableDataAvg.RData&quot;)
+names(WearableDataAvg)
 </code></pre>
 
-<pre><code>## Warning: cannot open compressed file &#39;WearableDataAvg.RData&#39;, probable
-## reason &#39;No such file or directory&#39;
-</code></pre>
-
-<pre><code>## Error: cannot open the connection
-</code></pre>
-
-<pre><code class="r">names(WearableDataAvg)
-</code></pre>
-
-<pre><code>## Error: object &#39;WearableDataAvg&#39; not found
+<pre><code>##  [1] &quot;subjectid&quot;                        &quot;description&quot;                     
+##  [3] &quot;AvgtBodyAcc.mean.X&quot;               &quot;AvgtBodyAcc.mean.Y&quot;              
+##  [5] &quot;AvgtBodyAcc.mean.Z&quot;               &quot;AvgtBodyAcc.std.X&quot;               
+##  [7] &quot;AvgtBodyAcc.std.Y&quot;                &quot;AvgtBodyAcc.std.Z&quot;               
+##  [9] &quot;AvgtGravityAcc.mean.X&quot;            &quot;AvgtGravityAcc.mean.Y&quot;           
+## [11] &quot;AvgtGravityAcc.mean.Z&quot;            &quot;AvgtGravityAcc.std.X&quot;            
+## [13] &quot;AvgtGravityAcc.std.Y&quot;             &quot;AvgtGravityAcc.std.Z&quot;            
+## [15] &quot;AvgtBodyAccJerk.mean.X&quot;           &quot;AvgtBodyAccJerk.mean.Y&quot;          
+## [17] &quot;AvgtBodyAccJerk.mean.Z&quot;           &quot;AvgtBodyAccJerk.std.X&quot;           
+## [19] &quot;AvgtBodyAccJerk.std.Y&quot;            &quot;AvgtBodyAccJerk.std.Z&quot;           
+## [21] &quot;AvgtBodyGyro.mean.X&quot;              &quot;AvgtBodyGyro.mean.Y&quot;             
+## [23] &quot;AvgtBodyGyro.mean.Z&quot;              &quot;AvgtBodyGyro.std.X&quot;              
+## [25] &quot;AvgtBodyGyro.std.Y&quot;               &quot;AvgtBodyGyro.std.Z&quot;              
+## [27] &quot;AvgtBodyGyroJerk.mean.X&quot;          &quot;AvgtBodyGyroJerk.mean.Y&quot;         
+## [29] &quot;AvgtBodyGyroJerk.mean.Z&quot;          &quot;AvgtBodyGyroJerk.std.X&quot;          
+## [31] &quot;AvgtBodyGyroJerk.std.Y&quot;           &quot;AvgtBodyGyroJerk.std.Z&quot;          
+## [33] &quot;AvgtBodyAccMag.mean&quot;              &quot;AvgtBodyAccMag.std&quot;              
+## [35] &quot;AvgtGravityAccMag.mean&quot;           &quot;AvgtGravityAccMag.std&quot;           
+## [37] &quot;AvgtBodyAccJerkMag.mean&quot;          &quot;AvgtBodyAccJerkMag.std&quot;          
+## [39] &quot;AvgtBodyGyroMag.mean&quot;             &quot;AvgtBodyGyroMag.std&quot;             
+## [41] &quot;AvgtBodyGyroJerkMag.mean&quot;         &quot;AvgtBodyGyroJerkMag.std&quot;         
+## [43] &quot;AvgfBodyAcc.mean.X&quot;               &quot;AvgfBodyAcc.mean.Y&quot;              
+## [45] &quot;AvgfBodyAcc.mean.Z&quot;               &quot;AvgfBodyAcc.std.X&quot;               
+## [47] &quot;AvgfBodyAcc.std.Y&quot;                &quot;AvgfBodyAcc.std.Z&quot;               
+## [49] &quot;AvgfBodyAcc.meanFreq.X&quot;           &quot;AvgfBodyAcc.meanFreq.Y&quot;          
+## [51] &quot;AvgfBodyAcc.meanFreq.Z&quot;           &quot;AvgfBodyAccJerk.mean.X&quot;          
+## [53] &quot;AvgfBodyAccJerk.mean.Y&quot;           &quot;AvgfBodyAccJerk.mean.Z&quot;          
+## [55] &quot;AvgfBodyAccJerk.std.X&quot;            &quot;AvgfBodyAccJerk.std.Y&quot;           
+## [57] &quot;AvgfBodyAccJerk.std.Z&quot;            &quot;AvgfBodyAccJerk.meanFreq.X&quot;      
+## [59] &quot;AvgfBodyAccJerk.meanFreq.Y&quot;       &quot;AvgfBodyAccJerk.meanFreq.Z&quot;      
+## [61] &quot;AvgfBodyGyro.mean.X&quot;              &quot;AvgfBodyGyro.mean.Y&quot;             
+## [63] &quot;AvgfBodyGyro.mean.Z&quot;              &quot;AvgfBodyGyro.std.X&quot;              
+## [65] &quot;AvgfBodyGyro.std.Y&quot;               &quot;AvgfBodyGyro.std.Z&quot;              
+## [67] &quot;AvgfBodyGyro.meanFreq.X&quot;          &quot;AvgfBodyGyro.meanFreq.Y&quot;         
+## [69] &quot;AvgfBodyGyro.meanFreq.Z&quot;          &quot;AvgfBodyAccMag.mean&quot;             
+## [71] &quot;AvgfBodyAccMag.std&quot;               &quot;AvgfBodyAccMag.meanFreq&quot;         
+## [73] &quot;AvgfBodyBodyAccJerkMag.mean&quot;      &quot;AvgfBodyBodyAccJerkMag.std&quot;      
+## [75] &quot;AvgfBodyBodyAccJerkMag.meanFreq&quot;  &quot;AvgfBodyBodyGyroMag.mean&quot;        
+## [77] &quot;AvgfBodyBodyGyroMag.std&quot;          &quot;AvgfBodyBodyGyroMag.meanFreq&quot;    
+## [79] &quot;AvgfBodyBodyGyroJerkMag.mean&quot;     &quot;AvgfBodyBodyGyroJerkMag.std&quot;     
+## [81] &quot;AvgfBodyBodyGyroJerkMag.meanFreq&quot;
 </code></pre>
 
 <h3>Details of each variable:</h3>
