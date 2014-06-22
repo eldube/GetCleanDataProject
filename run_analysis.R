@@ -100,7 +100,7 @@ trainingData <- cbind(subjectid,trainingData)
 ## The dataset data is stored in two text files                                                     ##
 ##  1. X_test.txt : Test Set                                                                        ##
 ##  2. y_test.txt : Training labels                                                                 ##
-##  subject_train.txt : Volonteer details                                                           ##
+##  3. subject_test.txt : Volonteer details                                                           ##
 ######################################################################################################
 
 
@@ -201,3 +201,6 @@ names(tidyDataAvg) <- avgColumnNames
 ## Data set to a file
 WearableDataAvg <-  tidyDataAvg
 save(WearableDataAvg, file="WearableDataAvg.RData")
+
+
+

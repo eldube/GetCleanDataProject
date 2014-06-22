@@ -2,8 +2,8 @@
 
 ## Purpose
 
-The purpose of the project was to consolidate the Human Activity Recognition Using Smartphones Dataset Version 1.0, which is stored in several
-files and folders, into a single tidy dataset. Described below is the original data and the steps taken to consolidate the dataset into a single dataset. For each variable in the consolidated dataset, a brief description in given.
+The purpose of the project was to consolidate the Human Activity Recognition Using Smartphones Dataset Version 1.0 (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones), which is stored in several
+files and folders, into a single tidy dataset. Described below is the original data and the steps taken to consolidate the several files into a single dataset. For each variable in the consolidated dataset, a brief description in given.
 
 ## The Original Data
 
@@ -19,44 +19,43 @@ According to the documentation, experiments were carried out with a group of 30 
 
 ## Downloading the Original Dataset
 
-A compressed data file can be downloaded from the following URL : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. When this file is unzipped several files are extracted into a folder called **UCI HAR Dataset**.  This folder contains two subfolders which randomly divides the dataset into training data (70% of the dataset stored in subfolder called **train** ) and test data (30% of the dataset stored in subfolder called **test**).Furthers details on the contents of the three folders  can be obtained from the documentation (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). In the sections that follow, we will simple refer to these three folders, and the specific files used in this project.
+A compressed data file can be downloaded from the following URL : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. When this file is unzipped, several files are extracted into a folder called **UCI HAR Dataset**.  This folder contains two subfolders which randomly divides the dataset into training data (70% of the dataset stored in subfolder called **train** ) and test data (30% of the dataset stored in subfolder called **test**).Further details on the contents of these three folders  can be obtained from the documentation (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). In the sections that follow, we will simple refer to these three folders, and the specific files used in this report.
 
 ### Contents of folder UCI HAR Dataset
 This folder contains information common to both the training data and test data in the data set.
 
-- **README.txt** : a overall description of the experiment
-- **features_info.txt**: Shows information about the variables used on the feature vector.
+- **README.txt** : an overall description of the experiment
+- **features_info.txt**: shows information about the variables used on the features vector.
 - **features.txt**: List of all features.
-- **activity_labels.txt**: Links the class labels with their activity name.
+- **activity_labels.txt**: Links the coded labels with their activity name.
 
 ### Contents of subfolder train 
 This folder contains information on the training data  which constitute 70% of the dataset.
 - **train/X_train.txt**: Training set data 
 - **train/y_train.txt**: Training labels.
-- **train/subject_train.txt**: Each row identifies the subject/volunteer who performed the activity. Its range is from 1 to 30. 
+- **train/subject_train.txt**: Each row identifies the subject/volunteer who performed the activity. The indentifier is an integer value between 1 and 30. 
 
 
 ### contents of subfolder train 
-his folder contains information on the test data  which constitute 30% of the dataset.
+This folder contains information on the test data  which constitute 30% of the dataset.
 - **test/X_test.txt**: Test set.
 - **test/y_test.txt**: Test labels.
-- **test/subject_train.txt**: Each row identifies the subject/volunteer who performed the activity. Its range is from 1 to 30.
+- **test/subject_train.txt**: Each row identifies the subject/volunteer who performed the activity. The indentifier is an integer value between 1 and 30.
 
-The purpose of this project was to consolidate the information contained in these files and folders into a single dataset that could be 
+The purpose of this project was to consolidate the information contained in the files listed above into a single dataset that could be 
 easier to use for further analysis. The section that follows outlines the steps taken to generate the consolidated dataset.
-
 
 ## Transformation and Consolidating the Data
 
 
 Firstly, a  compressed file of the original dataset was downloaded from the provided URL : "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" . , and uncompressed into a local working directory. The R code used to download the file, and perform
-the  other steps explained below, can be viewed from the R script file : **run_analysis.R**) 
+the  other steps explained below, can be viewed from the R script file **run_analysis.R** submitted with this codebook.
 
 Secondly, the general data available in the folder called **UCI HAR Dataset** was extracted and processed using R as followed.  
 
-1. Write R commands to read the feature variable names from **features.txt** file from the UCI HAR Dataset folder.These names are the same for both training and test data
+1. Write R commands to read the feature variable names from **features.txt** file in the UCI HAR Dataset folder.These names are the same for both training and test data
 
-2. Write R commands to reading activity label names from **activity_labels**.txt file. These labels are the same for both training and test data
+2. Write R commands to read activity label names from **activity_labels**.txt file. These labels are the same for both training and test data
 
 
 Thirdly, each set of data( training and test) were, initially, processed separately and merged later as follows:
@@ -87,8 +86,8 @@ Similarly, the test data is stored in three text files (**X_test.txt, y_test.txt
 a previous step above.
 13. Write R commands to extract only the measurements on mean and standard deviation for each measurent in the test data set
 
-14. Merge the training and test data obtained togethert to from one dataset.
-15. Make the column names more readable by changing renaming and removing unnecessary symbols.
+14. Merge the training and test data to form one dataset.
+15. Make the column names more readable by renaming and removing unnecessary symbols.
 16. Save the merged dataset to a file, called **WearableData.RData** , that can be loaded into an R session later using the **load()**
 command.
 17. Create a separate dataset that contains only the average of each variable in the **WearableData.RData** dataset for each activity and each 
@@ -97,7 +96,7 @@ subject/volunteer. Save this dataset to a file called **WearableData.RData**.
 
 ## Variables of **WearableData** dataset
 
-The **WearableData.RData**.RData** contains the tidy dataset obtained after step 16 above and can be loaded into an R session using the load command as shown below. The variables of this dataset are also shown using the **names()** function in R. 
+The **WearableData.RData** contains the tidy dataset obtained after step 16 above and can be loaded into an R session using the load command as shown below. The variables of this dataset are also shown using the **names()** function in R. 
 
 
 ```r
